@@ -10,6 +10,7 @@
 		780BAD2E1A4A147800294092 /* LambertSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 780BAD2D1A4A147800294092 /* LambertSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		780BAD341A4A147800294092 /* LambertSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780BAD281A4A147800294092 /* LambertSwift.framework */; };
 		780BAD3B1A4A147800294092 /* LambertSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BAD3A1A4A147800294092 /* LambertSwiftTests.swift */; };
+		780BAD451A4A159700294092 /* LambertSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BAD441A4A159700294092 /* LambertSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		780BAD331A4A147800294092 /* LambertSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LambertSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		780BAD391A4A147800294092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		780BAD3A1A4A147800294092 /* LambertSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LambertSwiftTests.swift; sourceTree = "<group>"; };
+		780BAD441A4A159700294092 /* LambertSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LambertSwift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				780BAD2D1A4A147800294092 /* LambertSwift.h */,
+				780BAD441A4A159700294092 /* LambertSwift.swift */,
 				780BAD2B1A4A147800294092 /* Supporting Files */,
 			);
 			path = LambertSwift;
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				780BAD451A4A159700294092 /* LambertSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +323,7 @@
 		780BAD3F1A4A147800294092 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -328,12 +333,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		780BAD401A4A147800294092 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

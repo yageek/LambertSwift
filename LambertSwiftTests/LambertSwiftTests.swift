@@ -8,6 +8,8 @@
 
 import UIKit
 import XCTest
+import CoreLocation
+import LambertSwift
 
 class LambertSwiftTests: XCTestCase {
     
@@ -23,7 +25,9 @@ class LambertSwiftTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+            var pt = CLLocation(x: 668832.5384, y: 6950138.7285, inZone: .Lambert93)
+            println("Pt origin: \(pt.coordinate.latitude) \(pt.coordinate.longitude)")
+//668832.5384,6950138.7285
     }
     
     func testPerformanceExample() {
