@@ -1,6 +1,14 @@
-# Description
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE.md)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
+# LambertSwift
 
 LambertSwift a Swift lightweight library to convert Lambert coordinates to WGS84
+
+# Carthage
+```
+github yageek/LambertSwift
+```
 
 # Usage
 
