@@ -7,7 +7,9 @@
 //
 
 import Foundation
-
+/**
+ Enum grouping all element about zones.
+*/
 public enum LambertZone :Int{
     case I = 0
     case II
