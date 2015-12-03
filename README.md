@@ -7,7 +7,7 @@ LambertSwift a Swift lightweight library to convert Lambert coordinates to WGS84
 
 # Carthage
 ```
-github yageek/LambertSwift
+github "yageek/LambertSwift"
 ```
 
 # Usage
