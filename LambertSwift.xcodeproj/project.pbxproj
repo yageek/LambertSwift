@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B66A39A1C10F2800022DBFC /* LambertSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B66A3991C10F2800022DBFC /* LambertSwift.swift */; };
 		780BAD2E1A4A147800294092 /* LambertSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 780BAD2D1A4A147800294092 /* LambertSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		780BAD341A4A147800294092 /* LambertSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780BAD281A4A147800294092 /* LambertSwift.framework */; };
 		780BAD3B1A4A147800294092 /* LambertSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BAD3A1A4A147800294092 /* LambertSwiftTests.swift */; };
-		780BAD451A4A159700294092 /* LambertSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BAD441A4A159700294092 /* LambertSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,13 +24,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B66A3991C10F2800022DBFC /* LambertSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LambertSwift.swift; sourceTree = "<group>"; };
 		780BAD281A4A147800294092 /* LambertSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LambertSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		780BAD2C1A4A147800294092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		780BAD2D1A4A147800294092 /* LambertSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LambertSwift.h; sourceTree = "<group>"; };
 		780BAD331A4A147800294092 /* LambertSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LambertSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		780BAD391A4A147800294092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		780BAD3A1A4A147800294092 /* LambertSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LambertSwiftTests.swift; sourceTree = "<group>"; };
-		780BAD441A4A159700294092 /* LambertSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LambertSwift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B66A3981C10F2800022DBFC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0B66A3991C10F2800022DBFC /* LambertSwift.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		780BAD1E1A4A147700294092 = {
 			isa = PBXGroup;
 			children = (
@@ -74,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				780BAD2D1A4A147800294092 /* LambertSwift.h */,
-				780BAD441A4A159700294092 /* LambertSwift.swift */,
+				0B66A3981C10F2800022DBFC /* Sources */,
 				780BAD2B1A4A147800294092 /* Supporting Files */,
 			);
 			path = LambertSwift;
@@ -161,6 +169,8 @@
 		780BAD1F1A4A147700294092 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = yageek;
 				TargetAttributes = {
@@ -212,7 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				780BAD451A4A159700294092 /* LambertSwift.swift in Sources */,
+				0B66A39A1C10F2800022DBFC /* LambertSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +412,7 @@
 				780BAD401A4A147800294092 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		780BAD411A4A147800294092 /* Build configuration list for PBXNativeTarget "LambertSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +421,7 @@
 				780BAD431A4A147800294092 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -26,7 +26,7 @@ class LambertSwiftTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
             var pt = CLLocation(x: 668832.5384, y: 6950138.7285, inZone: .Lambert93)
-            println("Pt origin: \(pt.coordinate.latitude) \(pt.coordinate.longitude)")
+            print("Pt origin: \(pt.coordinate.latitude) \(pt.coordinate.longitude)")
 //668832.5384,6950138.7285
     }
     

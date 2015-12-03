@@ -51,7 +51,7 @@ internal func latitudeFromLatitudeISO(lat_iso: Double, e: Double, eps: Double) -
     var phi_0: Double = 2*atan(exp(lat_iso)) - M_PI_2
     var phi_i: Double =  2*atan(pow((1+e*sin(phi_0))/(1-e*sin(phi_0)),e/2.0)*exp(lat_iso)) - M_PI_2
     
-    var delta: Double = 1000
+    let delta: Double = 1000
     while(delta > EPS){
         phi_0 = phi_i
         phi_i =  2*atan(pow((1+e*sin(phi_0))/(1-e*sin(phi_0)),e/2.0)*exp(lat_iso)) - M_PI_2
@@ -69,20 +69,20 @@ internal func lamberToGeographic(org: Point, zone: LambertZone, lon_merid: Doubl
     let x_s = lambert_xs[zone.rawValue]
     let y_s = lambert_ys[zone.rawValue]
     
-    var x = org.x
-    var y = org.y
+    let x = org.x
+    let y = org.y
     
-    var x2 = (x - x_s) * (x - x_s)
-    var y2 = (y - y_s) * (y - y_s)
+    let x2 = (x - x_s) * (x - x_s)
+    let y2 = (y - y_s) * (y - y_s)
     let R = sqrt( x2 + y2 );
     
     let gamma = atan((x-x_s)/(y_s-y))
     
     let lon = lon_merid + gamma / n
     
-    var lat_iso = -1/n*log(fabs(R/C))
+    let lat_iso = -1/n*log(fabs(R/C))
     
-    return Point(x: lon, y: latitudeFromLatitudeISO(lat_iso, e, eps), z:0)
+    return Point(x: lon, y: latitudeFromLatitudeISO(lat_iso, e: e, eps: eps), z:0)
     
 }
 
@@ -93,7 +93,7 @@ internal func lambertNormal(lat: Double, a: Double, e: Double) -> Double {
 
 internal func geographicToCartesian(lon: Double,lat: Double, he:Double, a: Double, e: Double) -> Point {
     
-    let N = lambertNormal(lat, a, e)
+    let N = lambertNormal(lat, a: a, e: e)
     
     var pt = Point(x: 0, y: 0, z:0)
     pt.x = (N+he)*cos(lat)*cos(lon)
@@ -114,7 +114,8 @@ internal func cartesianToGeographic(org: Point, meridian: Double, a: Double, e: 
     let module = sqrt(x*x + y*y)
     
     var phi_0 = atan(z/(module*(1-(a*e*e)/sqrt(x*x+y*y+z*z))));
-    var phi_i = atan(z/module/(1-a*e*e*cos(phi_0)/(module * sqrt(1-e*e*sin(phi_0)*sin(phi_0)))))
+    let tanphi_i = z/module/(1-a*e*e*cos(phi_0)/(module * sqrt(1-e*e*sin(phi_0)*sin(phi_0))))
+    var phi_i = atan(tanphi_i)
     var delta: Double = fabs(phi_i - phi_0)
     while(delta > eps)
     {
@@ -132,16 +133,16 @@ internal func pointToWGS84(point: Point, zone: LambertZone) -> Point{
     
     var dest: Point
     if (.Lambert93 == zone){
-        dest = lamberToGeographic(point, zone, LON_MERID_IERS, E_WGS84, EPS)
+        dest = lamberToGeographic(point, zone: zone, lon_merid: LON_MERID_IERS, e: E_WGS84, eps: EPS)
     } else {
-        dest = lamberToGeographic(point, zone, LON_MERID_PARIS, E_CLARK_IGN, EPS)
-        dest = geographicToCartesian(dest.x, dest.y, dest.z, A_CLARK_IGN, E_CLARK_IGN)
+        dest = lamberToGeographic(point, zone: zone, lon_merid: LON_MERID_PARIS, e: E_CLARK_IGN, eps: EPS)
+        dest = geographicToCartesian(dest.x, lat: dest.y, he: dest.z, a: A_CLARK_IGN, e: E_CLARK_IGN)
         
         dest.x -= 168
         dest.y -= 60
         dest.z += 320
         
-        dest = cartesianToGeographic(dest, LON_MERID_GREENWICH, A_WGS84, E_WGS84, EPS)
+        dest = cartesianToGeographic(dest, meridian: LON_MERID_GREENWICH, a: A_WGS84, e: E_WGS84, eps: EPS)
     }
     
     return dest
@@ -151,8 +152,8 @@ extension CLLocation {
        public convenience init(x: Double, y: Double, inZone: LambertZone){
         
         
-        var org:Point = Point(x: x, y: y, z: 0)
-        var dest: Point = pointToWGS84(org, inZone)
+        let org:Point = Point(x: x, y: y, z: 0)
+        var dest: Point = pointToWGS84(org, zone: inZone)
         let f : Double = 180.0/M_PI
         dest.x *= f
         dest.y *= f
