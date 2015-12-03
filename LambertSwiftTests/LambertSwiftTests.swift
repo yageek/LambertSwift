@@ -25,7 +25,7 @@ class LambertSwiftTests: XCTestCase {
     
     func testBasic() {
         // This is an example of a functional test case.
-            let pt = CLLocation(x: 668832.5384, y: 6950138.7285, inZone: .Lambert93)
+            let pt = CLLocation(x: 668832.5384, y: 6950138.7285, inZone: .L93)
         
             XCTAssertEqualWithAccuracy(pt.coordinate.longitude, 2.56865, accuracy: 1e-3)
             XCTAssertEqualWithAccuracy(pt.coordinate.latitude, 49.64961, accuracy: 1e-3)

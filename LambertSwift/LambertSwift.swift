@@ -10,30 +10,6 @@ import CoreLocation
 import Darwin
 
 
-public enum LambertZone :Int{
-    case LambertI = 0
-    case LambertII
-    case LambertIII
-    case LambertIV
-    case LambertII_E
-    case Lambert93
-}
-
-
-
-let E_CLARK_IGN: Double  = 0.08248325676
-let E_WGS84: Double =  0.08181919106
-let A_CLARK_IGN:Double = 6378249.2
-let A_WGS84:Double = 6378137.0
-
-let LON_MERID_PARIS: Double = 0
-let LON_MERID_GREENWICH: Double = 0.04079234433
-let LON_MERID_IERS: Double = (3*M_PI/180)
-
-internal let lambert_n : [Double] = [0.7604059656, 0.7289686274, 0.6959127966, 0.6712679322, 0.7289686274, 0.7256077650]
-internal let lambert_c: [Double] = [11603796.98, 11745793.39, 11947992.52, 12136281.99, 11745793.39, 11754255.426]
-internal let lambert_xs: [Double] = [600000.0, 600000.0, 600000.0, 234.358, 600000.0, 700000.0]
-internal let lambert_ys: [Double] = [5657616.674, 6199695.768, 6791905.085, 7239161.542, 8199695.768, 12655612.050]
 
 internal struct Point{
     var x:Double
@@ -65,10 +41,10 @@ internal func latitudeFromLatitudeISO(lat_iso: Double, e: Double, eps: Double) -
 internal func lamberToGeographic(org: Point, zone: LambertZone, lon_merid: Double, e: Double, eps: Double) -> Point{
     
     
-    let n = lambert_n[zone.rawValue]
-    let C = lambert_c[zone.rawValue]
-    let x_s = lambert_xs[zone.rawValue]
-    let y_s = lambert_ys[zone.rawValue]
+    let n = zone.n
+    let C = zone.c
+    let x_s = zone.xs
+    let y_s = zone.ys
     
     let x = org.x
     let y = org.y
@@ -133,7 +109,7 @@ internal func cartesianToGeographic(org: Point, meridian: Double, a: Double, e: 
 internal func pointToWGS84(point: Point, zone: LambertZone) -> Point{
     
     var dest: Point
-    if (.Lambert93 == zone){
+    if (.L93 == zone){
         dest = lamberToGeographic(point, zone: zone, lon_merid: LON_MERID_IERS, e: E_WGS84, eps: EPS)
     } else {
         dest = lamberToGeographic(point, zone: zone, lon_merid: LON_MERID_PARIS, e: E_CLARK_IGN, eps: EPS)

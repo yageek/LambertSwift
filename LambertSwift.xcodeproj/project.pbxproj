@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0B66A39C1C10F37B0022DBFC /* LambertSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B66A39B1C10F37B0022DBFC /* LambertSwift.swift */; };
+		0B66A39E1C10F5DF0022DBFC /* LambertZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B66A39D1C10F5DF0022DBFC /* LambertZone.swift */; };
+		0B66A3A01C10F6330022DBFC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B66A39F1C10F6330022DBFC /* Constants.swift */; };
 		780BAD2E1A4A147800294092 /* LambertSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 780BAD2D1A4A147800294092 /* LambertSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		780BAD341A4A147800294092 /* LambertSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780BAD281A4A147800294092 /* LambertSwift.framework */; };
 		780BAD3B1A4A147800294092 /* LambertSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BAD3A1A4A147800294092 /* LambertSwiftTests.swift */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		0B66A39B1C10F37B0022DBFC /* LambertSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LambertSwift.swift; sourceTree = "<group>"; };
+		0B66A39D1C10F5DF0022DBFC /* LambertZone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LambertZone.swift; sourceTree = "<group>"; };
+		0B66A39F1C10F6330022DBFC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		780BAD281A4A147800294092 /* LambertSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LambertSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		780BAD2C1A4A147800294092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		780BAD2D1A4A147800294092 /* LambertSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LambertSwift.h; sourceTree = "<group>"; };
@@ -73,8 +77,10 @@
 		780BAD2A1A4A147800294092 /* LambertSwift */ = {
 			isa = PBXGroup;
 			children = (
-				0B66A39B1C10F37B0022DBFC /* LambertSwift.swift */,
 				780BAD2D1A4A147800294092 /* LambertSwift.h */,
+				0B66A39B1C10F37B0022DBFC /* LambertSwift.swift */,
+				0B66A39D1C10F5DF0022DBFC /* LambertZone.swift */,
+				0B66A39F1C10F6330022DBFC /* Constants.swift */,
 				780BAD2B1A4A147800294092 /* Supporting Files */,
 			);
 			path = LambertSwift;
@@ -215,6 +221,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B66A39C1C10F37B0022DBFC /* LambertSwift.swift in Sources */,
+				0B66A39E1C10F5DF0022DBFC /* LambertZone.swift in Sources */,
+				0B66A3A01C10F6330022DBFC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
