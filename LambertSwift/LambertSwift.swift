@@ -51,10 +51,11 @@ internal func latitudeFromLatitudeISO(lat_iso: Double, e: Double, eps: Double) -
     var phi_0: Double = 2*atan(exp(lat_iso)) - M_PI_2
     var phi_i: Double =  2*atan(pow((1+e*sin(phi_0))/(1-e*sin(phi_0)),e/2.0)*exp(lat_iso)) - M_PI_2
     
-    let delta: Double = 1000
+    var delta: Double = 1000
     while(delta > EPS){
         phi_0 = phi_i
         phi_i =  2*atan(pow((1+e*sin(phi_0))/(1-e*sin(phi_0)),e/2.0)*exp(lat_iso)) - M_PI_2
+        delta = fabs(phi_i - phi_0)
     }
     
     return phi_i
@@ -121,7 +122,7 @@ internal func cartesianToGeographic(org: Point, meridian: Double, a: Double, e: 
     {
         phi_0 = phi_i
         phi_i = atan(z/module/(1-a*e*e*cos(phi_0)/(module * sqrt(1-e*e*sin(phi_0)*sin(phi_0)))));
-        
+        delta = fabs(phi_i - phi_0)
     }
     
     let he = module/cos(phi_i) - a/sqrt(1-e*e*sin(phi_i)*sin(phi_i))

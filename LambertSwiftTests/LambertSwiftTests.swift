@@ -23,18 +23,13 @@ class LambertSwiftTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testBasic() {
         // This is an example of a functional test case.
-            var pt = CLLocation(x: 668832.5384, y: 6950138.7285, inZone: .Lambert93)
-            print("Pt origin: \(pt.coordinate.latitude) \(pt.coordinate.longitude)")
-//668832.5384,6950138.7285
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
+            let pt = CLLocation(x: 668832.5384, y: 6950138.7285, inZone: .Lambert93)
+        
+            XCTAssertEqualWithAccuracy(pt.coordinate.longitude, 2.56865, accuracy: 1e-3)
+            XCTAssertEqualWithAccuracy(pt.coordinate.latitude, 49.64961, accuracy: 1e-3)
+
     }
     
 }
