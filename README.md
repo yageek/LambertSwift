@@ -10,6 +10,11 @@ LambertSwift is a Swift lightweight library to convert Lambert coordinates to WG
 github "yageek/LambertSwift"
 ```
 
+# Swift Package Manager
+```
+.Package(url: "https://github.com/yageek/LambertSwift.org.git",majorVersion: 1)
+```
+ 
 # Usage
 
 The Lambert extension adds a new initializer to the `CLLocation` class :
@@ -21,6 +26,5 @@ The Lambert extension adds a new initializer to the `CLLocation` class :
 	 */
 	 var loc:CLLocation = CLLocation(x: 668832.5384, y: 6950138.7285, inZone: .L93)
 ```
-
 
 

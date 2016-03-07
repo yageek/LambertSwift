@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B66A39C1C10F37B0022DBFC /* LambertSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B66A39B1C10F37B0022DBFC /* LambertSwift.swift */; };
-		0B66A39E1C10F5DF0022DBFC /* LambertZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B66A39D1C10F5DF0022DBFC /* LambertZone.swift */; };
-		0B66A3A01C10F6330022DBFC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B66A39F1C10F6330022DBFC /* Constants.swift */; };
-		780BAD2E1A4A147800294092 /* LambertSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 780BAD2D1A4A147800294092 /* LambertSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B6EB2DC1C8DC315008FFCA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6EB2D81C8DC315008FFCA4 /* Constants.swift */; };
+		0B6EB2DE1C8DC315008FFCA4 /* LambertSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6EB2DA1C8DC315008FFCA4 /* LambertSwift.swift */; };
+		0B6EB2DF1C8DC315008FFCA4 /* LambertZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6EB2DB1C8DC315008FFCA4 /* LambertZone.swift */; };
+		0B6EB2E41C8DC51C008FFCA4 /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = 0B6EB2E21C8DC51C008FFCA4 /* LICENSE.md */; };
+		0B6EB2E51C8DC51C008FFCA4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0B6EB2E31C8DC51C008FFCA4 /* README.md */; };
 		780BAD341A4A147800294092 /* LambertSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780BAD281A4A147800294092 /* LambertSwift.framework */; };
 		780BAD3B1A4A147800294092 /* LambertSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BAD3A1A4A147800294092 /* LambertSwiftTests.swift */; };
 /* End PBXBuildFile section */
@@ -26,12 +27,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B66A39B1C10F37B0022DBFC /* LambertSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LambertSwift.swift; sourceTree = "<group>"; };
-		0B66A39D1C10F5DF0022DBFC /* LambertZone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LambertZone.swift; sourceTree = "<group>"; };
-		0B66A39F1C10F6330022DBFC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0B6EB2D81C8DC315008FFCA4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Sources/Constants.swift; sourceTree = "<group>"; };
+		0B6EB2DA1C8DC315008FFCA4 /* LambertSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LambertSwift.swift; path = Sources/LambertSwift.swift; sourceTree = "<group>"; };
+		0B6EB2DB1C8DC315008FFCA4 /* LambertZone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LambertZone.swift; path = Sources/LambertZone.swift; sourceTree = "<group>"; };
+		0B6EB2E01C8DC335008FFCA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = "<group>"; };
+		0B6EB2E21C8DC51C008FFCA4 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		0B6EB2E31C8DC51C008FFCA4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0B6EB2E61C8DC526008FFCA4 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		780BAD281A4A147800294092 /* LambertSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LambertSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		780BAD2C1A4A147800294092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		780BAD2D1A4A147800294092 /* LambertSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LambertSwift.h; sourceTree = "<group>"; };
 		780BAD331A4A147800294092 /* LambertSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LambertSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		780BAD391A4A147800294092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		780BAD3A1A4A147800294092 /* LambertSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LambertSwiftTests.swift; sourceTree = "<group>"; };
@@ -56,10 +59,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B6EB2D71C8DC2E1008FFCA4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0B6EB2E01C8DC335008FFCA4 /* Info.plist */,
+				0B6EB2D81C8DC315008FFCA4 /* Constants.swift */,
+				0B6EB2DA1C8DC315008FFCA4 /* LambertSwift.swift */,
+				0B6EB2DB1C8DC315008FFCA4 /* LambertZone.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
 		780BAD1E1A4A147700294092 = {
 			isa = PBXGroup;
 			children = (
-				780BAD2A1A4A147800294092 /* LambertSwift */,
+				0B6EB2E61C8DC526008FFCA4 /* Package.swift */,
+				0B6EB2E21C8DC51C008FFCA4 /* LICENSE.md */,
+				0B6EB2E31C8DC51C008FFCA4 /* README.md */,
+				0B6EB2D71C8DC2E1008FFCA4 /* Sources */,
 				780BAD371A4A147800294092 /* LambertSwiftTests */,
 				780BAD291A4A147800294092 /* Products */,
 			);
@@ -72,26 +89,6 @@
 				780BAD331A4A147800294092 /* LambertSwiftTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		780BAD2A1A4A147800294092 /* LambertSwift */ = {
-			isa = PBXGroup;
-			children = (
-				780BAD2D1A4A147800294092 /* LambertSwift.h */,
-				0B66A39B1C10F37B0022DBFC /* LambertSwift.swift */,
-				0B66A39D1C10F5DF0022DBFC /* LambertZone.swift */,
-				0B66A39F1C10F6330022DBFC /* Constants.swift */,
-				780BAD2B1A4A147800294092 /* Supporting Files */,
-			);
-			path = LambertSwift;
-			sourceTree = "<group>";
-		};
-		780BAD2B1A4A147800294092 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				780BAD2C1A4A147800294092 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		780BAD371A4A147800294092 /* LambertSwiftTests */ = {
@@ -118,7 +115,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				780BAD2E1A4A147800294092 /* LambertSwift.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,8 +164,8 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0710;
-				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0610;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = yageek;
 				TargetAttributes = {
 					780BAD271A4A147800294092 = {
@@ -220,9 +216,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B66A39C1C10F37B0022DBFC /* LambertSwift.swift in Sources */,
-				0B66A39E1C10F5DF0022DBFC /* LambertZone.swift in Sources */,
-				0B66A3A01C10F6330022DBFC /* Constants.swift in Sources */,
+				0B6EB2E41C8DC51C008FFCA4 /* LICENSE.md in Sources */,
+				0B6EB2DC1C8DC315008FFCA4 /* Constants.swift in Sources */,
+				0B6EB2E51C8DC51C008FFCA4 /* README.md in Sources */,
+				0B6EB2DF1C8DC315008FFCA4 /* LambertZone.swift in Sources */,
+				0B6EB2DE1C8DC315008FFCA4 /* LambertSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +263,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -311,6 +311,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -338,9 +339,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = LambertSwift/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.yageek.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -355,9 +357,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = LambertSwift/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.yageek.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -376,6 +379,7 @@
 				);
 				INFOPLIST_FILE = LambertSwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.yageek.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -389,6 +393,7 @@
 				);
 				INFOPLIST_FILE = LambertSwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.yageek.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
