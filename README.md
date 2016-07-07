@@ -4,7 +4,7 @@
 # LambertSwift
 
 LambertSwift is a Swift lightweight library to convert Lambert coordinates to WGS84
-
+ 
 # Carthage
 ```
 github "yageek/LambertSwift"
@@ -15,6 +15,11 @@ github "yageek/LambertSwift"
 .Package(url: "https://github.com/yageek/LambertSwift.org.git",majorVersion: 1)
 ```
  
+ # Cocoapods
+ ```
+ pod 'LambertSwift'
+ ```
+
 # Usage
 
 The Lambert extension adds a new initializer to the `CLLocation` class :
