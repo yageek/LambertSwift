@@ -34,4 +34,5 @@ The Lambert extension adds a new initializer to the `CLLocation` class :
 	 var loc:CLLocation = CLLocation(x: 668832.5384, y: 6950138.7285, inZone: .L93)
 ```
 
-
+# License
+LambertSwift is released under the MIT license. See LICENSE for details.
